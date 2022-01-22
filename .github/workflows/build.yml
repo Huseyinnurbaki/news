@@ -21,6 +21,8 @@ jobs:
       with:
         node-version: 14.x
         cache: 'npm'
+      env:
+        GA_UPDATEOFFICER: ${{ secrets.GA_UPDATEOFFICER }}
     - run: |
         git config user.name 'Update Officer'
         git config user.email 'huseyin.nurbaki@gmail.com'
