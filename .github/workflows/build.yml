@@ -14,19 +14,15 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         token: ${{ secrets.GA_UPDATEOFFICER }}
-        node-version: ${{ matrix.node-version }}
+        node-version: 14.x
         cache: 'npm'
     - run: git config --global user.name 'Update Officer'
     - run: git config --global user.email 'huseyin.nurbaki@gmail.com'
     - run: npm ci
-    - run: npm run publish
+    - run: npm run deploy
