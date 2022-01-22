@@ -23,6 +23,7 @@ jobs:
     - run: |
         git config user.name 'Update Officer'
         git config user.email 'huseyin.nurbaki@gmail.com'
+        echo GA_TRACKING_ID=${{ secrets.GA_TRACKING_ID }} >> .env
         npm install -g gatsby-cli
         npm ci
         npm run ci-deploy
