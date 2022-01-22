@@ -16,16 +16,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+          token: ${{ secrets.PAT }}
     - name: Use Node.js
       uses: actions/setup-node@v2
       with:
         node-version: 14.x
-        cache: 'npm'
-      env:
-        GA_UPDATEOFFICER: ${{ secrets.GA_UPDATEOFFICER }}
     - run: |
         git config user.name 'Update Officer'
         git config user.email 'huseyin.nurbaki@gmail.com'
-        git remote set-url origin https://Huseyinnurbaki:$GA_UPDATEOFFICER@github.com/Huseyinnurbaki/news.git
         npm ci
         npm run deploy
