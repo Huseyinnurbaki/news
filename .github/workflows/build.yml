@@ -22,7 +22,8 @@ jobs:
         token: ${{ secrets.GA_UPDATEOFFICER }}
         node-version: 14.x
         cache: 'npm'
-    - run: git config --global user.name 'Update Officer'
-    - run: git config --global user.email 'huseyin.nurbaki@gmail.com'
-    - run: npm ci
-    - run: npm run deploy
+    - run: |
+        git config --global user.name 'Update Officer'
+        git config --global user.email 'huseyin.nurbaki@gmail.com'
+        npm ci
+        npm run deploy
