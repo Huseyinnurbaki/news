@@ -26,4 +26,4 @@ jobs:
         git config user.name 'Update Officer'
         git config user.email 'huseyin.nurbaki@gmail.com'
         npm ci
-        npm run deploy
+        npm run ci-deploy
