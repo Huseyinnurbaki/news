@@ -26,3 +26,5 @@ jobs:
         npm install -g gatsby-cli
         npm ci
         npm run ci-deploy
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
