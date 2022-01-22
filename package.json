@@ -19,7 +19,7 @@
     "clean": "gatsby clean",
     "lint": "eslint .",
     "deploy": "gatsby build && cp CNAME public/ && gh-pages -d public",
-    "ci-deploy": "gatsby build && cp CNAME public/ && gh-pages -d public -r https://Huseyinnurbaki:$GH_TOKEN@github.com/Huseyinnurbaki/news.git"
+    "ci-deploy": "gatsby build && cp CNAME public/ && gh-pages -d public -r https://Huseyinnurbaki:${{secrets.GH_TOKEN}}@github.com/Huseyinnurbaki/news.git"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
