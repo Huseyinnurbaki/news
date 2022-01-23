@@ -88,9 +88,9 @@ Seo.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-  title: "H.Haluk",
+  title: "News | HHaluk",
   image: {
-    src: "https://pbs.twimg.com/profile_banners/1000371867042148353/1641643019/1500x500",
+    src: "https://github.com/Huseyinnurbaki/notes/blob/master/Storage/news.hhaluk.png?raw=true",
     height: 630,
     width: 1200
 }

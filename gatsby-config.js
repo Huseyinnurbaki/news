@@ -47,8 +47,6 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
-    "gatsby-plugin-postcss"
-
-    
+    "gatsby-plugin-postcss"    
   ],
 };
