@@ -1,31 +1,31 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Build & Push
+# name: Build & Push
 
-on:
-  push:
-    branches: [ main ]
-  schedule:
-    - cron: '*/15 * * * *'
+# on:
+#   push:
+#     branches: [ main ]
+#   schedule:
+#     - cron: '*/15 * * * *'
 
-jobs:
-  build:
+# jobs:
+#   build:
 
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: 14.x
-    - run: |
-        git config user.name 'Update Officer'
-        git config user.email 'huseyin.nurbaki@gmail.com'
-        echo GA_TRACKING_ID=${{ secrets.GA_TRACKING_ID }} >> .env
-        npm install -g gatsby-cli
-        npm ci
-        npm run ci-deploy
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+#     steps:
+#     - uses: actions/checkout@v2
+#     - name: Use Node.js
+#       uses: actions/setup-node@v2
+#       with:
+#         node-version: 14.x
+#     - run: |
+#         git config user.name 'Update Officer'
+#         git config user.email 'huseyin.nurbaki@gmail.com'
+#         echo GA_TRACKING_ID=${{ secrets.GA_TRACKING_ID }} >> .env
+#         npm install -g gatsby-cli
+#         npm ci
+#         npm run ci-deploy
+#       env:
+#         GH_TOKEN: ${{ secrets.GH_TOKEN }}
